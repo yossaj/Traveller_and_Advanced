@@ -4,13 +4,12 @@ const AnagramFinder = function(word) {
 
 AnagramFinder.prototype.findAnagrams = function (list) {
   const letters = this.word.split('')
-  let counter = 0
+  show = []
   for( letter of letters ){
-    if(list[0].includes(letter)){
-      counter += 1
-    }
+     show = list.find(word => word.includes(letter))
   }
-  return counter
+  // console.log(shoe)
+  return show
 };
 
 module.exports = AnagramFinder;
